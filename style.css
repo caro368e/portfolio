@@ -220,3 +220,28 @@ p {
 #portfolio .container .box:hover .imgbox img {
     transform: scale(1.2);
 }
+
+
+
+
+
+
+
+
+/*FOOTER*/
+
+
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5em;
+
+}
+
+footer .so_me i {
+    color: #4c78be;
+    margin-right: 1em;
+}
