@@ -1,0 +1,222 @@
+/*font-family: 'Bebas Neue', cursive;
+font-family: 'Montserrat', sans-serif;*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    */ line-height: 4;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0.75em;
+}
+
+/*Utility classes */
+
+.m_heading {
+    text-align: center;
+    font-size: 2em;
+    margin: 1em;
+}
+
+.l-heading {
+    font-size: 4em;
+    margin-bottom: 0.1em;
+    line-height: 1.1;
+}
+
+.lead {
+    font-size: 1.3em;
+    margin-bottom: 2em;
+}
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    background: #4c78be;
+    padding: 0.5em 2em;
+    border: none;
+    border-radius: 2px;
+}
+
+.btn:hover {
+    background: #73a7f8;
+    transition: 0.5s;
+
+}
+
+/*NAVBAR*/
+#navbar {
+    /*WIll display whatever is the child of the navbar*/
+    display: flex;
+    justify-content: space-between;
+    /*sætter navbaren fast*/
+    position: sticky;
+    /*Bestemmer hvor Navbaren skal sidde*/
+    top: 0;
+    background: #4c78be;
+    color: #fff;
+    z-index: 1;
+    padding: 1em;
+}
+
+#navbar h1 {
+    padding-left: 1em;
+}
+
+#navbar ul {
+    /*Displays the child of the ul (the li)*/
+    display: flex;
+    /*Puts everything in the center (same level) in the flexbox*/
+    align-items: center;
+    /*removes bullets points*/
+    list-style: none;
+}
+
+#navbar ul li a {
+    color: #fff;
+    padding: 0.75em;
+    margin: 0 0.25em;
+}
+
+#navbar ul li a:hover {
+    background: #73a7f8;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+/*SHOWCASE HEADER*/
+#showcase {
+    background-image: url(img/blue-ocean-sea-water-175773.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 98vh;
+}
+
+#showcase .showcase-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 2em;
+    color: #fff;
+
+    /*OVERLAY: we'll give the overlay a position of
+    absolute so we can make an overlay*/
+    position: absolute;
+    /*top has to be the exact amount of px of the menu for the background to cover completely*/
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/*OM MIG*/
+
+#om_mig {
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 3em;
+}
+
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#om_mig .col {
+    flex-grow: 1;
+    flex-basis: 300px;
+    margin: 0.5em;
+    margin-bottom: 3em;
+}
+
+#om_mig .col h2 {
+    margin: 0.5em;
+    margin-top: 5em;
+    text-align: center;
+}
+
+#om_mig .col .txt {
+    margin: 0.5em;
+    margin-top: 3em;
+    margin-left: 2em;
+    line-height: 1.8em;
+}
+
+
+
+#om_mig img {
+    width: 100%;
+    margin-top: 7em;
+}
+
+
+/*PORTFOLIO*/
+#portfolio {
+    background-color: rgba(76, 120, 190, 0.55);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#portfolio .container {
+    display: flex;
+}
+
+#portfolio .container .box {
+    position: relative;
+    max-width: 300px;
+    background: #fff;
+    margin: 3em;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+#portfolio .container .box .imgbox {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    width: 600px;
+    height: 250px;
+}
+
+
+#portfolio .container .imgbox img {
+    max-width: 100%;
+    transition: transform 2s;
+    display: flex;
+    flex-direction: row;
+}
+
+#portfolio .container .box:hover .imgbox img {
+    transform: scale(1.2);
+}
