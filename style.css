@@ -140,21 +140,23 @@ p {
     .nav_links {
         position: absolute;
         right: 0px;
-        height: 80vh;
-        top: 3vh;
+        height: 70vh;
+        top: 5vh;
         background-color: #4c78be;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 30%;
-        transform: translateX(100%);
+        width: 50%;
+        transform: translateY(-180%);
         transition: transform 0.5 ease-in;
     }
 
     .nav_links li {
-        padding: 3em;
-        opacity: 0;
+        padding-top: 0;
+        margin: 0;
+        margin: 1em;
+        font-size: 1em;
     }
 
     .burger {
@@ -163,7 +165,7 @@ p {
 }
 
 .nav-active {
-    transform: translateX(0%);
+    transform: translateY(0%);
 }
 
 /*SHOWCASE HEADER*/
@@ -196,8 +198,18 @@ p {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width:768px) {
+    #showcase {
+        height: 93vh;
+    }
 
-/*OM MIG*/
+    #showcase .showcase-content {
+        font-size: 0.8em;
+    }
+}
+
+
+/*----------------------------------OM MIG--------------------------------*/
 
 #om_mig {
     max-width: 900px;
@@ -238,15 +250,44 @@ p {
     margin-top: 7em;
 }
 
+@media screen and (max-width:768px) {
 
-/*PORTFOLIO*/
+    om_mig {
+        max-width: 800px;
+        margin: auto;
+        margin-bottom: 3em;
+    }
+
+    #om_mig .col {
+        flex-grow: 1;
+        flex-basis: 200px;
+        margin: 0.5em;
+        margin-bottom: 3em;
+    }
+
+    #om_mig .col h2 {
+        margin: 0.5em;
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    #om_mig .col .txt {
+        margin: 0.2em;
+        margin-top: 1em;
+        margin-left: 0.1em;
+        line-height: 1.8em;
+    }
+}
+
+
+/*---------------------PORTFOLIO------------------------------------*/
 #portfolio {
     background-color: rgba(76, 120, 190, 0.55);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 600px;
+    height: 400px;
 }
 
 #portfolio h2 {
@@ -308,8 +349,25 @@ p {
     font-size: 3em;
 }
 
+/*MEDIA QUERIES FOR PORTfOLIO*/
 
-/*TEMA 2*/
+@media screen and (max-width:768px) {
+    #portfolio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        height: 1100px;
+        padding-left: 1.6em;
+    }
+
+    #portfolio .container {
+        align-content: center;
+    }
+}
+
+/*-------------------------------TEMA 2----------------------------*/
 #responsive_site_2 {
     max-width: 1500px;
     margin: auto;
@@ -355,7 +413,7 @@ p {
 
 
 
-/*FOOTER*/
+/*-------------------------FOOTER-----------------------------------*/
 
 
 footer {
@@ -365,10 +423,22 @@ footer {
     justify-content: space-between;
     align-items: center;
     margin: 0.5em;
-
+    flex-wrap: wrap;
 }
 
 footer .so_me i {
     color: #4c78be;
     margin-right: 1em;
+    align-content: center;
+}
+
+@media screen and (max-width:768px) {
+    footer .so_me {
+        margin-left: 5em;
+    }
+
+    footer .so_me i {
+        margin: 0.2;
+    }
+
 }
