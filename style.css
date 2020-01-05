@@ -31,8 +31,10 @@ p {
     margin: 0.75em;
 }
 
-.logo h1 {
+#navbar .logo h1 {
     font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 /*Utility classes */
@@ -56,19 +58,22 @@ p {
     padding: 0.5em 2em;
     border: none;
     border-radius: 2px;
+    cursor: pointer;
+    margin: 1em;
+    text-align: center;
 }
 
 .btn:hover {
     background: #73a7f8;
     transition: 0.5s;
-
 }
 
 /*NAVBAR*/
 #navbar {
     /*WIll display whatever is the child of the navbar*/
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     /*sætter navbaren fast*/
     position: sticky;
     /*Bestemmer hvor Navbaren skal sidde*/
@@ -76,7 +81,7 @@ p {
     background: #4c78be;
     color: #fff;
     z-index: 1;
-    padding: 1em;
+    padding: 0.6em;
     flex-wrap: wrap;
 }
 
@@ -103,6 +108,62 @@ p {
     background: #73a7f8;
     border-radius: 2px;
     transition: 0.5s;
+}
+
+/*BURGER MENU*/
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1024px) {
+    .nav_links {
+        width: 60%;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+    html {
+        overflow-x: hidden;
+    }
+
+    .nav_links {
+        position: absolute;
+        right: 0px;
+        height: 80vh;
+        top: 3vh;
+        background-color: #4c78be;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        transform: translateX(100%);
+        transition: transform 0.5 ease-in;
+    }
+
+    .nav_links li {
+        padding: 3em;
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
 }
 
 /*SHOWCASE HEADER*/
@@ -250,7 +311,7 @@ p {
 
 /*TEMA 2*/
 #responsive_site_2 {
-    max-width: 1800px;
+    max-width: 1500px;
     margin: auto;
     margin-bottom: 3em;
 }
@@ -259,6 +320,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: row-reverse;
 }
 
 #responsive_site_2 .col {
@@ -266,6 +328,7 @@ p {
     flex-basis: 500px;
     margin: 0.5em;
     margin-bottom: 3em;
+    text-align: center;
 }
 
 #responsive_site_2 .col h2 {
