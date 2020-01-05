@@ -68,7 +68,7 @@ p {
     transition: 0.5s;
 }
 
-/*NAVBAR*/
+/*-----------------------------NAVBAR----------------------------------*/
 #navbar {
     /*WIll display whatever is the child of the navbar*/
     display: flex;
@@ -110,7 +110,7 @@ p {
     transition: 0.5s;
 }
 
-/*BURGER MENU*/
+/*----------------------------BURGER MENU---------------------------*/
 
 .burger div {
     width: 25px;
@@ -168,13 +168,13 @@ p {
     transform: translateY(0%);
 }
 
-/*SHOWCASE HEADER*/
+/*-----------------------------SHOWCASE HEADER------------------------*/
 #showcase {
     background-image: url(img/blue-ocean-sea-water-175773.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 92vh;
+    height: 93vh;
 }
 
 #showcase .showcase-content {
@@ -191,7 +191,7 @@ p {
     absolute so we can make an overlay*/
     position: absolute;
     /*top has to be the exact amount of px of the menu for the background to cover completely*/
-    top: 5px;
+    top: 0px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -214,7 +214,7 @@ p {
 #om_mig {
     max-width: 900px;
     margin: auto;
-    margin-bottom: 3em;
+    margin-bottom: 7em;
 }
 
 .sectionwrapper {
@@ -252,18 +252,6 @@ p {
 
 @media screen and (max-width:768px) {
 
-    om_mig {
-        max-width: 800px;
-        margin: auto;
-        margin-bottom: 3em;
-    }
-
-    #om_mig .col {
-        flex-grow: 1;
-        flex-basis: 200px;
-        margin: 0.5em;
-        margin-bottom: 3em;
-    }
 
     #om_mig .col h2 {
         margin: 0.5em;
@@ -409,6 +397,173 @@ p {
     margin-top: 7em;
 }
 
+/*-----------------------------TEMA 3--------------------------------*/
+#overview {
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+}
+
+#overview ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    background-color: rgba(115, 167, 248, 0.38);
+    border-radius: 10px;
+}
+
+#overview ul li {
+    color: #000;
+    list-style: none;
+    padding-left: 0.5em;
+    margin: 0.5em;
+}
+
+#overview ul li a {
+    color: #000;
+}
+
+
+#dataindsamling {
+    max-width: 1500px;
+    margin: auto;
+    margin-bottom: 3em;
+}
+
+.sectionwrapper1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#dataindsamling .col {
+    flex-grow: 1;
+    flex-basis: 500px;
+    margin: 0.5em;
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+#dataindsamling .col h2 {
+    margin: 0.5em;
+    margin-top: 5em;
+    text-align: center;
+}
+
+#dataindsamling .col .txt {
+    margin: 0.5em;
+    margin-top: 3em;
+    margin-left: 2em;
+    line-height: 1.8em;
+}
+
+
+
+#dataindsamling img {
+    width: 100%;
+    margin-top: 7em;
+}
+
+
+
+/**********************prototype*********************/
+#prototype {
+    max-width: 1500px;
+    margin: auto;
+    margin-bottom: 3em;
+}
+
+.sectionwrapper2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+#prototype .col {
+    flex-grow: 1;
+    flex-basis: 500px;
+    margin: 0.5em;
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+#prototype .col h2 {
+    margin: 0.5em;
+    margin-top: 5em;
+    text-align: center;
+}
+
+#prototype .col .txt {
+    margin: 0.5em;
+    margin-top: 3em;
+    margin-left: 2em;
+    line-height: 1.8em;
+}
+
+
+
+#prototype img {
+    width: 100%;
+    margin-top: 7em;
+}
+
+
+
+
+
+/*/
+/////DESIGN SPRINT///////*/
+#design_sprint {
+    max-width: 1500px;
+    margin: auto;
+    margin-bottom: 3em;
+}
+
+.sectionwrapper3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#design_sprint .col {
+    flex-grow: 1;
+    flex-basis: 500px;
+    margin: 0.5em;
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+#design_sprint .col h2 {
+    margin: 0.5em;
+    margin-top: 5em;
+    text-align: center;
+}
+
+#design_sprint .col .txt {
+    margin: 0.5em;
+    margin-top: 3em;
+    margin-left: 2em;
+    line-height: 1.8em;
+}
+
+
+
+#design_sprint img {
+    width: 100%;
+    margin-top: 7em;
+}
+
+
+/*----------------------TEMA 4-------------------------------------*/
+
+
+
 
 
 
@@ -421,7 +576,8 @@ footer {
     font-size: 0.9em;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    ;
     margin: 0.5em;
     flex-wrap: wrap;
 }
