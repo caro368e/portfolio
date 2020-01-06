@@ -38,10 +38,19 @@ p {
 }
 
 /*Utility classes */
+.primary_color {
+    background-color: #4c78be;
+}
+
+.tema_overskrift {
+    text-align: center;
+    margin-top: 2em;
+    font-size: 1.5em;
+}
 
 
 .l-heading {
-    font-size: 4em;
+    font-size: 3em;
     margin-bottom: 0.1em;
     line-height: 1.1;
 }
@@ -63,9 +72,33 @@ p {
     text-align: center;
 }
 
+.btn2 {
+    display: inline-block;
+    color: #fff;
+    background: #365381;
+    padding: 0.5em 2em;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 1em;
+    text-align: center;
+}
+
 .btn:hover {
     background: #73a7f8;
     transition: 0.5s;
+}
+
+.btn2:hover {
+    background: #6293e0;
+    transition: 0.5s;
+}
+
+.middle_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /*-----------------------------NAVBAR----------------------------------*/
@@ -170,7 +203,7 @@ p {
 
 /*-----------------------------SHOWCASE HEADER------------------------*/
 #showcase {
-    background-image: url(img/blue-ocean-sea-water-175773.jpg);
+    background-image: url(img/iceice.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -267,10 +300,127 @@ p {
     }
 }
 
+/*-----------------------------------------CV--------------------------*/
+
+.cv_container {
+    padding: 3em;
+    background: #4c78be;
+    color: #fff;
+    max-width: 60vw;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 4px;
+    letter-spacing: 0.3em;
+
+}
+
+#timeline ul {
+    padding: 50px 0;
+}
+
+#timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background: #6299f2;
+}
+
+#timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    padding: 1em;
+    background: #4c78be;
+    border-radius: 4px;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+/*Right Side divs*/
+#timeline ul li:nth-child(odd) div {
+    left: 40px;
+}
+
+/*Left side divs*/
+#timeline ul li:nth-child(even) div {
+    left: -434px;
+}
+
+/*Prikker */
+
+#timeline ul li:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 25px;
+    height: 25px;
+    background: #6299f2;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    transition: background 0.5s ease-in-out;
+}
+
+/*Arrows Base*/
+#timeline div:before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/*Right Side Arrows*/
+#timeline ul li:nth-child(odd) div:before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #4c78be transparent transparent;
+}
+
+/*Left Side Arrows*/
+#timeline ul li:nth-child(even) div:before {
+    right: -15px;
+    border-width: 8px 0px 8px 16px;
+    border-color: transparent transparent transparent #4c78be;
+}
+
+@media screen and (max-width:768px) {
+    .cv_container {
+        padding: 3em;
+        max-width: 90vw;
+        font-size: 0.8em;
+
+    }
+
+    #timeline ul li {
+        margin-left: 10px;
+    }
+
+    #timeline ul li div {
+        width: 310px;
+        font-size: 0.8em;
+        line-height: 1.7em;
+    }
+
+    #timeline ul li:nth-child(even) div {
+        left: 40px;
+    }
+
+    #timeline ul li:nth-child(even) div:before {
+        left: -15px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent #4c78be transparent transparent;
+    }
+}
+
 
 /*---------------------PORTFOLIO------------------------------------*/
 #portfolio {
-    background-color: rgba(76, 120, 190, 0.55);
+    background-color: #4c78be;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -279,9 +429,10 @@ p {
 }
 
 #portfolio h2 {
-    margin: 0em;
-    padding: 0;
+    margin: 0.em;
+    padding: 0.1em;
     font-size: 3em;
+    color: #fff;
 }
 
 #portfolio .container {
@@ -374,7 +525,7 @@ p {
     flex-basis: 500px;
     margin: 0.5em;
     margin-bottom: 3em;
-    text-align: center;
+
 }
 
 #responsive_site_2 .col h2 {
@@ -403,6 +554,7 @@ p {
     width: 100vw;
     display: flex;
     justify-content: flex-start;
+    flex-direction: column;
     position: fixed;
 }
 
@@ -412,7 +564,6 @@ p {
     align-items: center;
     color: #000;
     background-color: rgba(115, 167, 248, 0.38);
-    border-radius: 10px;
 }
 
 #overview ul li {
@@ -445,7 +596,7 @@ p {
     flex-basis: 500px;
     margin: 0.5em;
     margin-bottom: 3em;
-    text-align: center;
+
 }
 
 #dataindsamling .col h2 {
@@ -489,7 +640,7 @@ p {
     flex-basis: 500px;
     margin: 0.5em;
     margin-bottom: 3em;
-    text-align: center;
+
 }
 
 #prototype .col h2 {
@@ -509,6 +660,7 @@ p {
 
 #prototype img {
     width: 100%;
+    max-width: 600px;
     margin-top: 7em;
 }
 
@@ -536,7 +688,6 @@ p {
     flex-basis: 500px;
     margin: 0.5em;
     margin-bottom: 3em;
-    text-align: center;
 }
 
 #design_sprint .col h2 {
@@ -557,12 +708,310 @@ p {
 #design_sprint img {
     width: 100%;
     margin-top: 7em;
+    margin-left: 4em;
+    max-width: 600px;
 }
+
+
+@media screen and (max-width:768px) {
+
+
+    #dataindsamling .col {
+        flex-grow: 1;
+        flex-basis: 500px;
+        margin: 0em;
+        margin-bottom: 1em;
+        text-align: start;
+    }
+
+    #dataindsamling .col h2 {
+        margin: 0.5em;
+        margin-top: 2em;
+    }
+
+    #dataindsamling .col .txt {
+        margin: 0.5em;
+        margin-top: 3em;
+        margin-left: 0.4em;
+        line-height: 1.8em;
+    }
+
+
+}
+
+@media screen and (max-width:768px) {
+
+
+    #prototype .col {
+        flex-grow: 1;
+        flex-basis: 500px;
+        margin: 0em;
+        margin-bottom: 1em;
+        text-align: start;
+    }
+
+    #prototype .col h2 {
+        margin: 0.5em;
+        margin-top: 2em;
+    }
+
+    #prototype .col .txt {
+        margin: 0.5em;
+        margin-top: 3em;
+        margin-left: 0.4em;
+        line-height: 1.8em;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+
+    #design_sprint .col {
+        flex-grow: 1;
+        flex-basis: 500px;
+        margin: 0em;
+        margin-bottom: 1em;
+        text-align: start;
+    }
+
+    #design_sprint .col h2 {
+        margin: 0.5em;
+        margin-top: 2em;
+    }
+
+    #design_sprint .col .txt {
+        margin: 0.5em;
+        margin-top: 3em;
+        margin-left: 0.4em;
+        line-height: 1.8em;
+    }
+
+}
+
 
 
 /*----------------------TEMA 4-------------------------------------*/
 
 
+
+/*___________________________ASSETLISTE _________________*/
+
+
+#assetliste_designdoku {
+    max-width: 1500px;
+    margin: auto;
+    margin-bottom: 3em;
+}
+
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+#assetliste_designdoku .col {
+    flex-grow: 1;
+    flex-basis: 500px;
+    margin: 0.5em;
+    margin-bottom: 3em;
+
+}
+
+#assetliste_designdoku .col h2 {
+    margin: 0.5em;
+    margin-top: 5em;
+    text-align: center;
+}
+
+#assetliste_designdoku .col .txt {
+    margin: 0.5em;
+    margin-top: 3em;
+    margin-left: 2em;
+    line-height: 1.8em;
+}
+
+#assetliste_designdoku img {
+    width: 100%;
+    margin-top: 7em;
+}
+
+
+/*-----------------------------Animations OPGAVE----------------*/
+
+
+#stella_stardust {
+    max-width: 100vw;
+    margin: auto;
+    margin-bottom: 3em;
+    background-color: #4c78be;
+}
+
+#stella_stardust .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+
+#stella_stardust .col {
+    flex-grow: 1;
+    flex-basis: 500px;
+    margin: 0.5em;
+    margin-bottom: 3em;
+
+}
+
+#stella_stardust .col h2 {
+    margin: 0.5em;
+    margin-top: 5em;
+    text-align: center;
+}
+
+#stella_stardust .col .txt {
+    margin: 0.5em;
+    margin-top: 3em;
+    margin-left: 2em;
+    line-height: 1.8em;
+}
+
+#stella_stardust img {
+    width: 100%;
+    margin-top: 7em;
+}
+
+
+
+/*-----------------------------Billeddeling--------------*/
+
+
+#billed_deling {
+    max-width: 1500px;
+    margin: auto;
+    margin-bottom: 3em;
+}
+
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+#billed_deling .col {
+    flex-grow: 1;
+    flex-basis: 500px;
+    margin: 0.5em;
+    margin-bottom: 3em;
+
+}
+
+#billed_deling .col h2 {
+    margin: 0.5em;
+    margin-top: 5em;
+    text-align: center;
+}
+
+#billed_deling .col .txt {
+    margin: 0.5em;
+    margin-top: 3em;
+    margin-left: 2em;
+    line-height: 1.8em;
+}
+
+#billed_deling img {
+    width: 100%;
+    margin-top: 7em;
+}
+
+
+/*-------------------------TEMA 5 ------------------------------------------*/
+#pilotvideo {
+    max-width: 1500px;
+    margin: auto;
+    margin-bottom: 3em;
+}
+
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+#pilotvideo .col {
+    flex-grow: 1;
+    flex-basis: 500px;
+    margin: 0.5em;
+    margin-bottom: 3em;
+
+}
+
+#pilotvideo .col h2 {
+    margin: 0.5em;
+    margin-top: 5em;
+    text-align: center;
+}
+
+#pilotvideo .col .txt {
+    margin: 0.5em;
+    margin-top: 3em;
+    margin-left: 2em;
+    line-height: 1.8em;
+}
+
+#pilotvideo img {
+    width: 100%;
+    margin-top: 7em;
+}
+
+/*-------------REDESIGN---------------*/
+
+#redesign {
+    max-width: 1500px;
+    margin: auto;
+    margin-bottom: 3em;
+}
+
+#redesign .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+
+#redesign .col {
+    flex-grow: 1;
+    flex-basis: 500px;
+    margin: 0.5em;
+    margin-bottom: 3em;
+
+}
+
+#redesign .col h2 {
+    margin: 0.5em;
+    margin-top: 5em;
+    text-align: center;
+}
+
+#redesign .col .txt {
+    margin: 0.5em;
+    margin-top: 3em;
+    margin-left: 2em;
+    line-height: 1.8em;
+}
+
+#redesign img {
+    width: 100%;
+    margin-top: 7em;
+    border: solid #000 1px;
+}
 
 
 
@@ -584,7 +1033,7 @@ footer {
 
 footer .so_me i {
     color: #4c78be;
-    margin-right: 1em;
+    margin-right: 0.3em;
     align-content: center;
 }
 
