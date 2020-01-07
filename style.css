@@ -20,6 +20,10 @@ h1 {
     font-family: 'Bebas Neue', cursive;
 }
 
+h3 {
+    margin-top: 0.75em;
+}
+
 a {
     text-decoration: none;
     color: #fff;
@@ -28,13 +32,13 @@ a {
 }
 
 p {
-    margin: 0.75em;
+    margin: 1em;
 }
 
-#navbar .logo h1 {
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+#navbar img {
+    width: 50px;
+    padding: 0;
+    margin: 0;
 }
 
 /*Utility classes */
@@ -42,10 +46,17 @@ p {
     background-color: #4c78be;
 }
 
-.tema_overskrift {
+#tema_overskrift {
     text-align: center;
-    margin-top: 2em;
-    font-size: 1.5em;
+    margin-top: 3em;
+    font-size: 1em;
+}
+
+@media screen and (max-width:768px) {
+    #tema_overskrift h1 {
+        padding-top: 1em;
+        font-size: 2em;
+    }
 }
 
 
@@ -135,6 +146,7 @@ p {
     color: #fff;
     padding: 0.75em;
     margin: 0 0.25em;
+    letter-spacing: 0.2em;
 }
 
 #navbar ul li a:hover {
@@ -188,7 +200,7 @@ p {
     .nav_links li {
         padding-top: 0;
         margin: 0;
-        margin: 1em;
+        margin: 2em;
         font-size: 1em;
     }
 
@@ -281,6 +293,7 @@ p {
 #om_mig img {
     width: 100%;
     margin-top: 7em;
+    border-radius: 4px;
 }
 
 @media screen and (max-width:768px) {
@@ -418,6 +431,10 @@ p {
 }
 
 
+
+
+
+
 /*---------------------PORTFOLIO------------------------------------*/
 #portfolio {
     background-color: #4c78be;
@@ -425,7 +442,8 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 600px;
+    padding-bottom: 4em;
 }
 
 #portfolio h2 {
@@ -449,6 +467,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    border-radius: 4px;
 }
 
 #portfolio .container .box .imgbox {
@@ -468,6 +487,7 @@ p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    border-radius: 4px;
 }
 
 #portfolio .container .box:hover .imgbox img {
@@ -546,6 +566,38 @@ p {
 #responsive_site_2 img {
     width: 100%;
     margin-top: 7em;
+    border-radius: 4px;
+}
+
+
+@media screen and (max-width:768px) {
+
+
+    #responsive_site_2 .col {
+        flex-grow: 1;
+        flex-basis: 500px;
+        margin: 0em;
+        margin-bottom: 1em;
+        text-align: start;
+    }
+
+    #responsive_site_2 .col h2 {
+        margin: 0.5em;
+        margin-top: 2em;
+    }
+
+    #responsive_site_2 .col .txt {
+        margin: 0.5em;
+        margin-top: 3em;
+        margin-left: 0.4em;
+        line-height: 1.8em;
+    }
+
+    #responsive_site_2 img {
+        width: 100%;
+        margin-top: 2em;
+        border-radius: 4px;
+    }
 }
 
 /*-----------------------------TEMA 3--------------------------------*/
@@ -577,7 +629,13 @@ p {
     color: #000;
 }
 
+@media screen and (max-width:768px) {
+    #overview {
+        display: none;
+    }
+}
 
+/*-------------------------------DATAINDSAMLING-----------------*/
 #dataindsamling {
     max-width: 1500px;
     margin: auto;
@@ -614,9 +672,10 @@ p {
 
 
 
-#dataindsamling img {
+#dataindsamling .col img {
     width: 100%;
     margin-top: 7em;
+    border-radius: 4px;
 }
 
 
@@ -662,6 +721,7 @@ p {
     width: 100%;
     max-width: 600px;
     margin-top: 7em;
+    border-radius: 4px;
 }
 
 
@@ -710,11 +770,12 @@ p {
     margin-top: 7em;
     margin-left: 4em;
     max-width: 600px;
+    border-radius: 4px;
 }
 
+/*--------------------MEDIA Queries tema 3---------------*/
 
 @media screen and (max-width:768px) {
-
 
     #dataindsamling .col {
         flex-grow: 1;
@@ -726,7 +787,7 @@ p {
 
     #dataindsamling .col h2 {
         margin: 0.5em;
-        margin-top: 2em;
+        margin-top: 1em;
     }
 
     #dataindsamling .col .txt {
@@ -787,6 +848,14 @@ p {
         line-height: 1.8em;
     }
 
+    #design_sprint img {
+        width: 100%;
+        margin-top: 7em;
+        margin-left: 0em;
+        max-width: 600px;
+        border-radius: 4px;
+    }
+
 }
 
 
@@ -836,6 +905,7 @@ p {
 #assetliste_designdoku img {
     width: 100%;
     margin-top: 7em;
+    border-radius: 4px;
 }
 
 
@@ -881,6 +951,7 @@ p {
 #stella_stardust img {
     width: 100%;
     margin-top: 7em;
+    border-radius: 4px;
 }
 
 
@@ -926,10 +997,77 @@ p {
 #billed_deling img {
     width: 100%;
     margin-top: 7em;
+    border-radius: 4px;
+}
+
+/*------------------------------------MEDIA QUERIES TEMA 4-----------*/
+@media screen and (max-width:768px) {
+
+    #assetliste_designdoku .col {
+        flex-grow: 1;
+        flex-basis: 500px;
+        margin: 0em;
+        margin-bottom: 1em;
+        text-align: start;
+    }
+
+    #assetliste_designdoku .col h2 {
+        margin: 0.5em;
+        margin-top: 1em;
+    }
+
+    #assetliste_designdoku .col .txt {
+        margin: 0.5em;
+        margin-top: 3em;
+        margin-left: 0.4em;
+        line-height: 1.8em;
+    }
+
+    #stella_stardust .col {
+        flex-grow: 1;
+        flex-basis: 500px;
+        margin: 0em;
+        margin-bottom: 1em;
+        text-align: start;
+    }
+
+    #stella_stardust .col h2 {
+        margin: 0.5em;
+        margin-top: 1em;
+    }
+
+    #stella_stardust .col .txt {
+        margin: 0.5em;
+        margin-top: 3em;
+        margin-left: 0.4em;
+        line-height: 1.8em;
+    }
+
+    #billed_deling .col {
+        flex-grow: 1;
+        flex-basis: 500px;
+        margin: 0em;
+        margin-bottom: 1em;
+        text-align: start;
+    }
+
+    #billed_deling .col h2 {
+        margin: 0.5em;
+        margin-top: 1em;
+    }
+
+    #billed_deling .col .txt {
+        margin: 0.5em;
+        margin-top: 3em;
+        margin-left: 0.4em;
+        line-height: 1.8em;
+    }
+
+
 }
 
 
-/*-------------------------TEMA 5 ------------------------------------------*/
+/*-------------------------TEMA 5 ------------------------------*/
 #pilotvideo {
     max-width: 1500px;
     margin: auto;
@@ -968,6 +1106,7 @@ p {
 #pilotvideo img {
     width: 100%;
     margin-top: 7em;
+    border-radius: 4px;
 }
 
 /*-------------REDESIGN---------------*/
@@ -1011,9 +1150,89 @@ p {
     width: 100%;
     margin-top: 7em;
     border: solid #000 1px;
+    border-radius: 4px;
 }
 
 
+/*--------------------------MEDIAQUERIES TEMA 5---------------*/
+@media screen and (max-width:768px) {
+
+    #pilotvideo .col {
+        flex-grow: 1;
+        flex-basis: 500px;
+        margin: 0em;
+        margin-bottom: 1em;
+        text-align: start;
+    }
+
+    #pilotvideo .col h2 {
+        margin: 0.5em;
+        margin-top: 1em;
+    }
+
+    #pilotvideo .col .txt {
+        margin: 0.5em;
+        margin-top: 3em;
+        margin-left: 0.4em;
+        line-height: 1.8em;
+    }
+
+    #redesign .col {
+        flex-grow: 1;
+        flex-basis: 500px;
+        margin: 0em;
+        margin-bottom: 1em;
+        text-align: start;
+    }
+
+    #redesign .col h2 {
+        margin: 0.5em;
+        margin-top: 1em;
+    }
+
+    #redesign .col .txt {
+        margin: 0.5em;
+        margin-top: 3em;
+        margin-left: 0.4em;
+        line-height: 1.8em;
+    }
+
+}
+
+/*---------------------KONTAKT-------------------------------------*/
+#kontakt .ikoner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    margin: 3em;
+}
+
+#kontakt .ikoner .ikon {
+    margin: 5em;
+}
+
+#kontakt .ikoner .ikon i {
+    padding: 1em;
+    border-radius: 50%;
+    background: #4c78be;
+    color: #fff;
+
+}
+
+@media screen and (max-width:768px) {
+
+    #kontakt .ikoner {
+        flex-direction: column;
+        margin: 1em;
+    }
+
+    #kontakt .ikoner .ikon {
+        margin: 0.1em;
+        font-size: 0.7em;
+    }
+}
 
 
 
@@ -1029,6 +1248,8 @@ footer {
     ;
     margin: 0.5em;
     flex-wrap: wrap;
+    border-top: solid 1px #000;
+    padding: 0.6em;
 }
 
 footer .so_me i {
@@ -1038,12 +1259,15 @@ footer .so_me i {
 }
 
 @media screen and (max-width:768px) {
-    footer .so_me {
-        margin-left: 5em;
+
+    footer {
+        font-size: 0.7em;
+        justify-content: center
     }
 
     footer .so_me i {
         margin: 0.2;
+        border-radius: 4px;
     }
 
 }
