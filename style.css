@@ -246,7 +246,7 @@ p {
 
 @media screen and (max-width:768px) {
     #showcase {
-        height: 91vh;
+        height: 92vh;
     }
 
     #showcase .showcase-content {
@@ -1315,6 +1315,6 @@ footer .so_me i {
     }
 
     to {
-        transform: translateY(1vw);
+        transform: translateY(2vw);
     }
 }
