@@ -246,7 +246,7 @@ p {
 
 @media screen and (max-width:768px) {
     #showcase {
-        height: 92vh;
+        height: 91vh;
     }
 
     #showcase .showcase-content {
@@ -1013,7 +1013,7 @@ p {
     #assetliste_designdoku .col {
         flex-grow: 1;
         flex-basis: 500px;
-        margin: 0em;
+        margin: 1em;
         margin-bottom: 1em;
         text-align: start;
     }
